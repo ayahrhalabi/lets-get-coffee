@@ -1,0 +1,13 @@
+flask
+streamlit==1.32.0
+pandas
+plotly==5.18.0
+langchain==0.1.11
+chromadb==0.4.22
+sentence-transformers==2.5.1
+numpy==1.26.4
+google 
+langchain-google-genai
+google-generativeai
+tqdm
+dotenv
