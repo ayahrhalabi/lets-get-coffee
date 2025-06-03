@@ -126,7 +126,7 @@ elif page == "Chatbot":
                     response = requests.post(
                         "https://letsgetcoffee-image-508717259631.us-central1.run.app/ask",
                         json={"question": user_input},
-                        timeout=10
+                       #timeout=10
                     )
                     if response.status_code == 200:
                         result = response.json()
