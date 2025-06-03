@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+
+# Secrets
+.env
+
+# OS files
+.DS_Store
+
+# Chroma vector DB (optional)
+chroma_db/
