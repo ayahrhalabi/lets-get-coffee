@@ -20,12 +20,12 @@ them as the external knowledge, or documents, that I fed my RAG Pipline to lever
 For the LLM, I used langchain_google_genai package where I called on the GoogleGenerativeAIEmbeddings function to acquire the embeddings of my texts and used Chroma DB to store the embeddings, 
 and ChatGoogleGenerativeAI for my LLM. 
 
-Once the model was done, I created a Flack App in order to be able to interact with my model and output the recommendations to the user. The curl command used locally was 
+Once the model was done, I created a Flask App in order to be able to interact with my model and output the recommendations to the user. The curl command used locally was 
 
 ```
 curl -X POST http://localhost:8000/ask -H "Content-Type: application/json" -d '{"question":"Where can I find good matcha?"}'
 ```
-One the user ran that in the terminal, the flask app output a place with recommendations. One bug I kept running into was the embeddings showing up as a list of list. Thus I created a 
+Once the user ran that in the terminal, the flask app output a place with recommendations. One bug I kept running into was the embeddings showing up as a list of list. Thus I created a 
 class in order to unlist the embeddings so that my model ran. The Issue might have arrised due to passing one document at a time, but this isse will be further analyzed at later stages of the project.
 
 Once the model was running, I then containerized it using Docker, and pushed it to Docker Hub. I then used the Container URL to deploy it on Google Cloud Run to obtain a API endpoint my frontend could call upon. 
